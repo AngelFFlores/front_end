@@ -1,5 +1,5 @@
-export const Orders = (() => {
+export const Orders = () => {
   return(
     <h1>Orders</h1>
   )
-})
+}

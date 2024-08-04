@@ -1,25 +1,17 @@
-import React from 'react';
-import { Navbar } from './Navbar';
-import { Routes, Route } from 'react-router-dom';
-import { Home } from '../pages/Home';
-import { Users } from '../pages/Users';
-import { Orders } from '../pages/Orders';
-import { Clients } from '../pages/Clients';
+import React from 'react'
+import { Navbar } from './Navbar'
+import { AuthProvider } from '../context/AuthProvider'
+import RoutesConfig from '../RoutesConfig'
 
-function Layout() {
+export const Layout = () => {
   return (
     <>
-      <Navbar />
-      <main>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/usuarios' element={<Users />} />
-          <Route path='/ordenes' element={<Orders />} />
-          <Route path='/clientes' element={<Clients />} />
-        </Routes>
-      </main>
+      <AuthProvider>
+        <Navbar />
+        <main className='container-fluid mx-2'>
+          <RoutesConfig />
+        </main>
+      </AuthProvider>
     </>
-  );
+  )
 }
-
-export default Layout;
