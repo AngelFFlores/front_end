@@ -10,10 +10,8 @@ export const useAuth = () => {
   return context
 }
 
-
-
 export const AuthProvider = ({ children }) => {
-  const [isAuthenticated, setAuthenticated] = useState(false)
+  const [isAuthenticated, setAuthenticated] = useState(true)
 
   const sigNin = () => {
     setAuthenticated(true)
