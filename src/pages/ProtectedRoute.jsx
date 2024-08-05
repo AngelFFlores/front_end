@@ -8,7 +8,7 @@ export const ProtectedRoute = () => {
   return isAuthenticated ? (
     <>
       <Navbar />
-      <main className='container-fluid mx-2'>
+      <main className='container-xl px-3'>
         <Outlet />
       </main>
     </>

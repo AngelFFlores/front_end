@@ -17,8 +17,13 @@ export const AuthProvider = ({ children }) => {
     setAuthenticated(true)
   }
 
+  const logOut = () => {
+    setAuthenticated(false)
+  }
+
+
   return (
-    <AuthContext.Provider value={{ isAuthenticated, sigNin }}>
+    <AuthContext.Provider value={{ isAuthenticated, sigNin, logOut }}>
       {children}
     </AuthContext.Provider>
   )
